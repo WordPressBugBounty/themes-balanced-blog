@@ -14,7 +14,7 @@ if ( post_password_required() ) {
 			<h3 id="comments text-center">
 				<?php 
         /* translators: %1$s: number of comments */
-        printf( esc_html( _nx( '%1$s Comment', '%1$s Comments', get_comments_number(), 'comments title', 'balanced-blog' ), esc_html(number_format_i18n( get_comments_number() ) ) ) );
+        printf( esc_html( _nx( '%1$s Comment', '%1$s Comments', get_comments_number(), 'comments title', 'balanced-blog' ), esc_html(number_format_i18n( get_comments_number() ) ) ), esc_html( get_the_title() ) );
         ?>
 			</h3>
 			<ul class="commentlist list-unstyled">
